@@ -338,7 +338,8 @@ class Register extends Component {
                       registerForm.password.value !== ""
                         ? `Your password is required and Must contain at least one uppercase character,
                      one number, special character and not shorter than 6 characters!`
-                        : ""
+                        : `Your password is required and Must contain at least one uppercase character,
+                        one number, special character and not shorter than 6 characters`
                     }
                     messageClassName={registerForm.password.messageClassName}
                   />
@@ -378,7 +379,8 @@ class Register extends Component {
                         !registerForm.confirmPassword.focused &&
                         registerForm.confirmPassword.value !== "") ||
                       (registerForm.confirmPassword.value !==
-                        registerForm.password.value && registerForm.confirmPassword.value !== "")
+                        registerForm.password.value &&
+                        registerForm.confirmPassword.value !== "")
                         ? "Password must match the password field and be valid!"
                         : ""
                     }
