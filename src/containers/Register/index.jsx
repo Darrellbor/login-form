@@ -377,9 +377,9 @@ class Register extends Component {
                       (!registerForm.confirmPassword.valid &&
                         !registerForm.confirmPassword.focused &&
                         registerForm.confirmPassword.value !== "") ||
-                      registerForm.confirmPassword.value !==
-                        registerForm.password.value
-                        ? "Password must match the password field!"
+                      (registerForm.confirmPassword.value !==
+                        registerForm.password.value && registerForm.confirmPassword.value !== "")
+                        ? "Password must match the password field and be valid!"
                         : ""
                     }
                     messageClassName={
